@@ -1,0 +1,129 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tempo de Geração: 
+-- Versão do Servidor: 5.5.24-log
+-- Versão do PHP: 5.4.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE DATABASE `veiculos`
+
+USE `veiculos`;
+
+--
+-- Banco de Dados: `veiculos`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `carro`
+--
+
+DROP TABLE IF EXISTS `carro`;
+CREATE TABLE IF NOT EXISTS `carro` (
+  `carroId` int(11) NOT NULL AUTO_INCREMENT,
+  `marcaId` int(11) NOT NULL,
+  `carroModelo` varchar(300) NOT NULL,
+  `carroAno` char(4) NOT NULL,
+  `carroFoto` varchar(200) NOT NULL,
+  `carroVlr` decimal(6,2) NOT NULL,
+  `carroParcelas` int(11) NOT NULL,
+  `carroVlrTotal` decimal(6,2) NOT NULL DEFAULT '0.00',
+  `carroDtHr` datetime NOT NULL,
+  `userIdCad` int(11) NOT NULL,
+  PRIMARY KEY (`carroId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Estrutura da tabela `log`
+--
+
+DROP TABLE IF EXISTS `log`;
+CREATE TABLE IF NOT EXISTS `log` (
+  `logId` int(11) NOT NULL AUTO_INCREMENT,
+  `logDtHr` datetime NOT NULL,
+  `userIdCad` int(11) NOT NULL,
+  `userTipo` char(1) NOT NULL,
+  PRIMARY KEY (`logId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `marca`
+--
+
+DROP TABLE IF EXISTS `marca`;
+CREATE TABLE IF NOT EXISTS `marca` (
+  `marcaId` int(11) NOT NULL AUTO_INCREMENT,
+  `marcaNm` varchar(250) NOT NULL,
+  `marcaDtHr` datetime NOT NULL,
+  `userIdCad` int(11) NOT NULL,
+  PRIMARY KEY (`marcaId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `userId` int(11) NOT NULL AUTO_INCREMENT,
+  `userNm` varchar(100) NOT NULL,
+  `userPass` varchar(500) NOT NULL,
+  `userEmail` varchar(150) NOT NULL,
+  `userTipo` char(1) NOT NULL,
+  `userDtHr` datetime NOT NULL,
+  `userIdCad` int(11) NOT NULL,
+  PRIMARY KEY (`userId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `user`
+--
+
+INSERT INTO `user` (`userId`, `userNm`, `userPass`, `userEmail`, `userTipo`, `userDtHr`, `userIdCad`) VALUES
+(1, 'admin', 'admin', 'admin@gmail.com', 'A', '2014-04-16 06:54:25', 2),
+(2, 'funcionario', 'funcionario', 'funcionario@gmail.com', 'F', '2014-04-16 04:53:10', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura stand-in para visualizar `vw_carro`
+--
+DROP VIEW IF EXISTS `vw_carro`;
+DROP TABLE IF EXISTS `vw_carro`;
+CREATE TABLE IF NOT EXISTS `vw_carro` (
+`carroId` int(11)
+,`marcaId` int(11)
+,`carroModelo` varchar(300)
+,`carroAno` char(4)
+,`carroFoto` varchar(200)
+,`carroVlr` decimal(6,2)
+,`carroParcelas` int(11)
+,`carroVlrTotal` decimal(6,2)
+,`carroDtHr` datetime
+,`userIdCad` int(11)
+,`userNm` varchar(100)
+,`marcaNm` varchar(250)
+);
+-- --------------------------------------------------------
+
+--
+-- Estrutura para visualizar `vw_carro`
+--
+
+DROP VIEW IF EXISTS `vw_carro`;
+CREATE
+DEFINER=CURRENT_USER SQL SECURITY INVOKER
+VIEW 
+ vw_carro
+AS 
+select `carro`.`carroId` AS `carroId`,`carro`.`marcaId` AS `marcaId`,`carro`.`carroModelo` AS `carroModelo`,`carro`.`carroAno` AS `carroAno`,`carro`.`carroFoto` AS `carroFoto`,`carro`.`carroVlr` AS `carroVlr`,`carro`.`carroParcelas` AS `carroParcelas`,`carro`.`carroVlrTotal` AS `carroVlrTotal`,`carro`.`carroDtHr` AS `carroDtHr`,`carro`.`userIdCad` AS `userIdCad`,`user`.`userNm` AS `userNm`,`marca`.`marcaNm` AS `marcaNm` from ((`carro` join `marca` on((`marca`.`marcaId` = `carro`.`marcaId`))) join `user` on((`carro`.`userIdCad` = `user`.`userId`)));

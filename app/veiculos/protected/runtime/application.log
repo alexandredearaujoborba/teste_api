@@ -1,0 +1,566 @@
+2014/04/15 16:48:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'veiculos.marcas' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `marcas`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 16:50:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'veiculos.veiculo' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `veiculo`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 17:46:19 [error] [exception.CException] exception 'CException' with message 'Carro and its behaviors do not have a method or closure named "getMarcaCombo".' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getMarcaCombo', Array)
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\_form.php(25): CActiveRecord->__call('getMarcaCombo', Array)
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\_form.php(25): Carro->getMarcaCombo()
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(126): require('C:\Users\alexan...')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\alexan...', Array, true)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\alexan...', Array, true)
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\create.php(18): CController->renderPartial('_form', Array)
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(126): require('C:\Users\alexan...')
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\Users\alexan...', Array, true)
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(869): CBaseController->renderFile('C:\Users\alexan...', Array, true)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php(82): CController->render('create', Array)
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): CarroController->actionCreate()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('carro/create')
+#23 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=carro/create
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=carro/index
+---
+2014/04/15 18:37:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:37:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:37:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:37:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:37:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:38:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:38:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:38:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:38:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:38:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:40:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:40:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:40:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:40:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:40:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'veiculos.vwcarro' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `vwcarro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:40:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:41:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'veiculos.vwcarro' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `vwCarro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:41:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:41:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:41:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 18:41:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 1356 View 'veiculos.vw_carro' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them. The SQL statement executed was: SHOW FULL COLUMNS FROM `vw_carro`.
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 21:09:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('carro/admin')
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=carro/admin
+---
+2014/04/15 21:10:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('carro/admin')
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=carro/admin
+---
+2014/04/15 21:11:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('carro/admin')
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=carro/admin
+---
+2014/04/15 22:30:22 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (72)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:30:22 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (72)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:30:43 [error] [php] Use of undefined constant marcaDtHr - assumed 'marcaDtHr' (C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php:96)
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(133): MarcaController->runAction()
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CInlineFilter.php(58): MarcaController->filterAccessControl()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): MarcaController->runActionWithFilters()
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): MarcaController->run()
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=marca/update&id=2
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (96)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:32:19 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (98)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:32:19 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (98)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:32:42 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (72)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:32:42 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (72)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:34:19 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (72)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:34:19 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (72)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:34:28 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (98)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:34:28 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (98)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:36:25 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (72)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:36:25 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (72)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:38:50 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 22:38:50 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/15 23:33:23 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userPass" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(46): CComponent->__get('userPass')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/15 23:44:37 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userPass" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(46): CComponent->__get('userPass')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/15 23:46:47 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userPass" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(46): CComponent->__get('userPass')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/15 23:48:53 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userPass" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(47): CComponent->__get('userPass')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/15 23:50:44 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userPass" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(47): CComponent->__get('userPass')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/16 00:09:01 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userPass" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(47): CComponent->__get('userPass')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/16 00:09:39 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userPass" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(47): CComponent->__get('userPass')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/16 00:10:01 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userPass" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(47): CComponent->__get('userPass')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/16 00:16:36 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.userId" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(53): CComponent->__get('userId')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/16 02:01:56 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "getData".' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getData', Array)
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(46): CActiveRecord->__call('getData', Array)
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(46): User->getData()
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/16 02:02:19 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\db\ar\CActiveRecord.php(145): CComponent->__get('password')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php(51): CActiveRecord->__get('password')
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+HTTP_REFERER=http://localhost/desenv/_api/veiculos/index.php?r=site/login
+---
+2014/04/16 02:15:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php:483
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(270): CController->missingAction('admin')
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController('carro/admin')
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=carro/admin
+---
+2014/04/16 02:32:31 [error] [php] Object of class Carro could not be converted to string (C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\_form.php(29): dropDownList()
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(126): require()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(95): CarroController->renderInternal()
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(869): CarroController->renderFile()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\create.php(18): CarroController->renderPartial()
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(126): require()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(95): CarroController->renderInternal()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(869): CarroController->renderFile()
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(782): CarroController->renderPartial()
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php(82): CarroController->render()
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): CarroController->actionCreate()
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(133): CarroController->runAction()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CInlineFilter.php(58): CarroController->filterAccessControl()
+#16 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CarroController->runActionWithFilters()
+#19 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CarroController->run()
+#20 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=carro/create
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\_form.php (29)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\create.php (18)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (82)
+2014/04/16 02:57:08 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 02:57:08 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 02:57:27 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 02:57:27 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 02:57:44 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 02:57:44 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 03:08:06 [error] [php] Use of undefined constant userIdCad - assumed 'userIdCad' (C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php:61)
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php(94): LoginForm->validate()
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=site/login
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\components\UserIdentity.php (61)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\models\LoginForm.php (52)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\SiteController.php (94)
+2014/04/16 04:54:06 [warning] [application] Failed to set unsafe attribute "marcaDtHr" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 04:54:06 [warning] [application] Failed to set unsafe attribute "userIdCad" of "Marca".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\MarcaController.php (100)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:26:57 [warning] [application] Failed to set unsafe attribute "carroFoto" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:39:54 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php(2255): tag()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php(1434): activeInputField()
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\widgets\CActiveForm.php(725): activeTextField()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\_form.php(119): CActiveForm->textField()
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(126): require()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(95): CarroController->renderInternal()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(869): CarroController->renderFile()
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\create.php(18): CarroController->renderPartial()
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(126): require()
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(95): CarroController->renderInternal()
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(869): CarroController->renderFile()
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(782): CarroController->renderPartial()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php(89): CarroController->render()
+#14 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): CarroController->actionCreate()
+#15 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(133): CarroController->runAction()
+#17 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CInlineFilter.php(58): CarroController->filterAccessControl()
+#20 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CarroController->runActionWithFilters()
+#23 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CarroController->run()
+#24 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=carro/create
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\_form.php (119)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\create.php (18)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (89)
+2014/04/16 06:40:56 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php(2255): tag()
+#2 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\helpers\CHtml.php(1434): activeInputField()
+#3 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\widgets\CActiveForm.php(725): activeTextField()
+#4 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\_form.php(119): CActiveForm->textField()
+#5 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(126): require()
+#6 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(95): CarroController->renderInternal()
+#7 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(869): CarroController->renderFile()
+#8 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\create.php(18): CarroController->renderPartial()
+#9 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(126): require()
+#10 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CBaseController.php(95): CarroController->renderInternal()
+#11 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(869): CarroController->renderFile()
+#12 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(782): CarroController->renderPartial()
+#13 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php(89): CarroController->render()
+#14 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\actions\CInlineAction.php(49): CarroController->actionCreate()
+#15 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(133): CarroController->runAction()
+#17 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CInlineFilter.php(58): CarroController->filterAccessControl()
+#20 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CController.php(265): CarroController->runActionWithFilters()
+#23 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(282): CarroController->run()
+#24 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/desenv/_api/veiculos/index.php?r=carro/create
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\_form.php (119)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\views\carro\create.php (18)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (89)
+2014/04/16 06:42:51 [warning] [application] Failed to set unsafe attribute "carroFoto" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:42:51 [warning] [application] Failed to set unsafe attribute "carroVlrTotal" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:42:51 [warning] [application] Failed to set unsafe attribute "carroDtHr" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:46:22 [warning] [application] Failed to set unsafe attribute "carroFoto" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:46:22 [warning] [application] Failed to set unsafe attribute "carroVlrTotal" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:46:22 [warning] [application] Failed to set unsafe attribute "carroDtHr" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:48:14 [warning] [application] Failed to set unsafe attribute "carroFoto" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:48:14 [warning] [application] Failed to set unsafe attribute "carroVlrTotal" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)
+2014/04/16 06:48:14 [warning] [application] Failed to set unsafe attribute "carroDtHr" of "Carro".
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\protected\controllers\CarroController.php (75)
+in C:\Users\alexandre.borba\Dropbox\www\desenv\_api\veiculos\index.php (13)

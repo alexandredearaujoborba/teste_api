@@ -1,0 +1,58 @@
+Desenvolver um sistema de cadastro de Carros.
+O sistema deve ser construído em MVC apartir da utilização de algum framework. Em oredem de preferencia:
+
+1) Yii;
+2) Zend;
+3) CodeIgniter;
+4) CakePhp;
+
+Deve ser utilizado algum framework para front-end. Em ordem de preferencia:
+1) BootStrap;
+2) JQuery UI;
+3) BluePrint;
+
+A base de dados deve ser,  em ordem de preferencia:
+1) Oracle XE;
+2) PostgreSql;
+3) MySql;
+
+A base de dados deve conter no mínimo 4 tables
+
+CARRO
+MARCA
+USER
+LOG
+
+
+Controle de versão
+Git
+    * Vamos aceitar a avaliação submetida somente via repositório GitHub ou BitBucket;
+    * Lembre-se de incluir o script da base de dados;
+
+
+- Login do sistema
+    - Cadastro de Novos usuários (No mínimo dois perfis de acessos(funcionário, admin))
+    - Recuperação de senha
+    - Registrar acesso no LOG
+
+- Carro
+    - Carro pertence a Marca
+        Deve conter os seguinte dados mínimos
+            - Modelo
+            - Ano            
+            - Foto
+            - Valor do carro
+            - Número de parcelas máximo (3/6/12)
+            - Valor total com juros (0,7%) ao mês
+            - Data cadastro
+            - Id usuário cadastro
+
+- Marca do carro
+    - Marca
+    - Data cadastro
+    - Id usuário cadastro
+
+- Regras de negócio
+    - Somente usuários do perfil admin podem excluir dados
+    - Somente usuários do perfil admin podem criar novos usuários
+    - Somente usuários do perfil admin podem editar o valor do carro
